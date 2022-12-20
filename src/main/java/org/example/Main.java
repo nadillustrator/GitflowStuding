@@ -8,12 +8,14 @@ public class Main {
     private final static Random random = new Random();
     public static void main(String[] args) {
         int guess = random.nextInt(10);
+        int counter = 1;
         System.out.println("Enter number from 0 to 9: ");
         int num = scanner.nextInt();
         while (num != guess) {
+            counter++;
             System.out.println("Try one more time: ");
             num = scanner.nextInt();
         }
-            System.out.println("Congratulations! You guessed! Number " + guess);
+            System.out.println("Congratulations! You guessed it on the " + counter +" try. Number " + guess);
     }
 }
